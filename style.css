@@ -119,3 +119,22 @@ p {
   display: block;
   margin: 1rem auto;
 }
+
+.site-footer {
+  background-color: #1e2b39;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: #b08900;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
