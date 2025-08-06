@@ -1,4 +1,4 @@
-/* 字體與排版設定 */
+/* Reset & base styles */
 body {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: #ffffff;
@@ -8,74 +8,32 @@ body {
   line-height: 1.75;
 }
 
-/* 標頭樣式 */
-header {
-  background-color: #1e2b39;
-  color: #fff;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-h1 {
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-h2 {
-  color: #b08900;
-  margin-top: 2.5rem;
-  font-size: 1.4rem;
-}
-
-/* 區塊排版 */
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem 1rem;
-}
-
-section {
-  margin-bottom: 2rem;
-}
-
-p {
-  margin-bottom: 1.2rem;
-}
-
-/* 活動通知區塊 */
-.events {
-  list-style: none;
-  padding: 0;
-}
-
-.events li {
-  background-color: #f9f9f9;
-  margin-bottom: 0.5rem;
-  padding: 1rem;
-  border-left: 5px solid #b08900;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-/* RWD 響應式設計 */
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.4rem;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-  }
-
-  .events li {
-    font-size: 0.95rem;
-  }
-}
-
-
+/* Navbar with logo and text */
 .navbar {
   background-color: #1e2b39;
-  padding: 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+}
+
+.brand-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 .navbar ul {
@@ -95,10 +53,54 @@ p {
   font-weight: bold;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #b08900;
+  border-bottom: 2px solid #b08900;
 }
 
+/* Page layout */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h2 {
+  color: #b08900;
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+}
+
+/* Events list */
+.events {
+  list-style: none;
+  padding: 0;
+}
+
+.events li {
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-left: 5px solid #b08900;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Button */
 .button {
   display: inline-block;
   background-color: #b08900;
@@ -114,12 +116,14 @@ p {
   background-color: #967500;
 }
 
+/* QR Code */
 .qr {
   max-width: 200px;
   display: block;
   margin: 1rem auto;
 }
 
+/* Footer */
 .site-footer {
   background-color: #1e2b39;
   color: #fff;
@@ -138,9 +142,35 @@ p {
   text-decoration: underline;
 }
 
-.navbar a.active {
-  border-bottom: 2px solid #b08900;
-  color: #b08900;
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
 }
 
+.footer-row span {
+  white-space: nowrap;
+}
 
+/* RWD */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .events li {
+    font-size: 0.95rem;
+  }
+
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
