@@ -113,3 +113,9 @@ p {
 .button:hover {
   background-color: #967500;
 }
+
+.qr {
+  max-width: 200px;
+  display: block;
+  margin: 1rem auto;
+}
