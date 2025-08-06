@@ -24,21 +24,9 @@
     </section>
   </main>
 
-<div id="footer"></div>
+	<div id="footer"></div>
+	<script src="main.js"></script>
 
-<script>
-  fetch("header.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("header").innerHTML = html;
-    });
-
-  fetch("footer.html")
-    .then(res => res.text())
-    .then(html => {
-      document.getElementById("footer").innerHTML = html;
-    });
-</script>
 		
 </body>
 </html>

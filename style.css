@@ -138,3 +138,9 @@ p {
   text-decoration: underline;
 }
 
+.navbar a.active {
+  border-bottom: 2px solid #b08900;
+  color: #b08900;
+}
+
+
