@@ -1,16 +1,18 @@
+/* 字體與排版設定 */
 body {
   font-family: 'Noto Sans TC', sans-serif;
   background-color: #ffffff;
   color: #1c1c1c;
   margin: 0;
-  padding: 2rem;
-  line-height: 1.8;
+  padding: 0;
+  line-height: 1.75;
 }
 
+/* 標頭樣式 */
 header {
   background-color: #1e2b39;
   color: #fff;
-  padding: 2rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -20,24 +22,51 @@ h1 {
 }
 
 h2 {
-  color: #b08900; /* 金色主題 */
-  margin-top: 2rem;
+  color: #b08900;
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+}
+
+/* 區塊排版 */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
 }
 
 section {
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem 0;
+  margin-bottom: 2rem;
 }
 
+p {
+  margin-bottom: 1.2rem;
+}
+
+/* 活動通知區塊 */
 .events {
   list-style: none;
   padding: 0;
 }
 
 .events li {
-  background-color: #f5f5f5;
+  background-color: #f9f9f9;
   margin-bottom: 0.5rem;
   padding: 1rem;
-  border-left: 4px solid #b08900;
+  border-left: 5px solid #b08900;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* RWD 響應式設計 */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .events li {
+    font-size: 0.95rem;
+  }
 }
