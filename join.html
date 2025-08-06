@@ -7,14 +7,7 @@
   <link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
-  <nav class="navbar">
-    <ul>
-      <li><a href="index.html">關於我們</a></li>
-      <li><a href="events.html">活動通知</a></li>
-      <li><a href="join.html">加入我們</a></li>
-      <li><a href="contact.html">聯絡方式</a></li>
-    </ul>
-  </nav>
+  <div id="header"></div>
 
   <main>
     <section>
@@ -31,5 +24,13 @@
       <p><a class="button" href="contact.html">📬 聯絡我們</a></p>
     </section>
   </main>
+
+  <script>
+    fetch("header.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("header").innerHTML = html;
+      });
+  </script>
 </body>
 </html>
