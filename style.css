@@ -8,7 +8,7 @@ body {
   line-height: 1.75;
 }
 
-/* Navbar with logo and text */
+/* Navbar with logo */
 .navbar {
   background-color: #1e2b39;
   padding: 1rem 2rem;
@@ -18,22 +18,9 @@ body {
   flex-wrap: wrap;
 }
 
-.navbar-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.logo {
-  height: 32px;
+.navbar-logo img {
+  height: 40px;
   width: auto;
-}
-
-.brand-text {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
 }
 
 .navbar ul {
@@ -57,6 +44,24 @@ body {
 .navbar a.active {
   color: #b08900;
   border-bottom: 2px solid #b08900;
+}
+
+/* Hero section with fire background */
+.hero {
+  background: url('fire.png') center center no-repeat;
+  background-size: 160px;
+  background-color: #1e2b39;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-title {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
 }
 
 /* Page layout */
